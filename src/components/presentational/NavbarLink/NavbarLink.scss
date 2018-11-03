@@ -1,8 +1,13 @@
 .navbarLinkContainer {
+    width: 100%;
+
     a {
+        display: block;
+        width: 100%;
         color: var(--app-main-color);
-        padding: 8px;
+        text-align: center;
         text-decoration: none;
+        padding: 8px 0;
     }
     .selectedNavbarLink {
         background-color: white;

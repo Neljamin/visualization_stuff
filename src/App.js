@@ -8,14 +8,26 @@ import './scss/fonts.scss';
 import { HomePage } from './components/pages/HomePage';
 import { LineDancingPage } from './components/pages/LineDancingPage';
 import { ThreeJsDancingPage } from './components/pages/ThreeJsDancingPage';
+import { CircleDancingPage } from './components/pages/CircleDancingPage/';
+
+import NavbarContainer from './components/container/NavbarContainer';
+import { Header, NavbarLink } from './components/presentational';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
+        <Header title="Visualization" subtitle='Stuff'/>
+        <NavbarContainer>
+            <NavbarLink exact to='/'>Home</NavbarLink>
+            <NavbarLink to='/lineDancing'>Line Dancing</NavbarLink>
+            <NavbarLink to='/3dDancing'>3D Dancing</NavbarLink>
+            <NavbarLink to='/circleDancing'>Circle Dancing</NavbarLink>
+        </NavbarContainer>
         <Switch>
             <Route path='/3dDancing' component={ThreeJsDancingPage}/>
             <Route path='/lineDancing' component={LineDancingPage}/>
+            <Route path='/circleDancing' component={CircleDancingPage}/>
             <Route exact path='/' component={HomePage}/>
             <Redirect to="/" />
         </Switch>

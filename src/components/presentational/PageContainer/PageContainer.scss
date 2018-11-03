@@ -1,6 +1,7 @@
 .pageContainer {
     display: flex;
     justify-content: center;
+    min-height: 400px;
 
     .page {
         width: 800px;

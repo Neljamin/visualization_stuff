@@ -1,0 +1,28 @@
+$min-small-screen-size: 576px;
+$min-medium-screen-size: 768px;
+$min-large-screen-size: 992px;
+$min-extra-large-screen-size: 1200px;
+
+@mixin smallScreen {
+    @media (min-width: #{$min-small-screen-size}) {
+        @content;
+    }
+ }
+
+@mixin mediumScreen {
+    @media (min-width: #{$min-medium-screen-size}) {
+        @content;
+    }
+}
+
+@mixin largeScreen {
+    @media (min-width: #{$min-large-screen-size}) {
+        @content;
+    }
+}
+
+@mixin extraLargeScreen {
+    @media (min-width: #{$min-extra-large-screen-size}) {
+        @content;
+    }
+}

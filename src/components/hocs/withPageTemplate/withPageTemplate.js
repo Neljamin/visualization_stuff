@@ -1,11 +1,8 @@
 import React, { Component } from 'react';
 import {
-    Header,
     Footer,
     PageContainer,
-    PageHeading,
-    Navbar,
-    NavbarLink
+    PageHeading
 } from '../../presentational';
 
 export function withPageTemplate(WrappedComponent, pageProps) {
@@ -15,12 +12,6 @@ export function withPageTemplate(WrappedComponent, pageProps) {
         render() {
             return (
                 <div>
-                    <Header title="Visualization" subtitle='Stuff'/>
-                    <Navbar>
-                        <NavbarLink exact to='/'>Home</NavbarLink>
-                        <NavbarLink to='/lineDancing'>Line Dancing</NavbarLink>
-                        <NavbarLink to='/3dDancing'>3D Dancing</NavbarLink>
-                    </Navbar>
                     <PageContainer>
                         <PageHeading title={title}/>
                         <WrappedComponent {...this.props} />
