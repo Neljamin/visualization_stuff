@@ -1,7 +1,18 @@
 .header {
-    height: 128px;
+    height: 150px;
     background-color: var(--app-main-color);
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
+    text-decoration: none;
+
+    .headerTitle {
+        color: white;
+        text-shadow: 2px 2px 0px rgba(0,0,0,0.2);
+    }
+
+    .headerSubtitle {
+        color: white;
+    }
 }

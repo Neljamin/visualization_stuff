@@ -4,7 +4,7 @@ import _ from 'lodash';
 import styled from 'styled-components';
 import AudioContainer from '../../container/AudioContainer';
 
-class CubeDancingPage extends Component {
+class LineDancingPage extends Component {
     static defaultProps = {
         chunkSize: 32,
         boxWidth: 100 / 32
@@ -67,7 +67,7 @@ const DancingBox = styled.div.attrs({
 
 
 const pageProps = {
-    title: 'Click play to watch the screen dance'
+    title: 'Click play to watch the lines dance'
 };
 
-export default withPageTemplate(CubeDancingPage, pageProps);
+export default withPageTemplate(LineDancingPage, pageProps);

@@ -6,7 +6,7 @@ import './scss/fonts.scss';
 
 // pages
 import { HomePage } from './components/pages/HomePage';
-import { CubeDancingPage } from './components/pages/CubeDancingPage';
+import { LineDancingPage } from './components/pages/LineDancingPage';
 import { ThreeJsDancingPage } from './components/pages/ThreeJsDancingPage';
 
 class App extends Component {
@@ -15,7 +15,7 @@ class App extends Component {
       <div className="App">
         <Switch>
             <Route path='/3dDancing' component={ThreeJsDancingPage}/>
-            <Route path='/cubeDancing' component={CubeDancingPage}/>
+            <Route path='/lineDancing' component={LineDancingPage}/>
             <Route path='/' component={HomePage}/>
         </Switch>
       </div>

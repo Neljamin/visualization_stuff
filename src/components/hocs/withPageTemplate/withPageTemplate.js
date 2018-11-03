@@ -4,9 +4,9 @@ import {
     Footer,
     PageContainer,
     PageHeading,
-    Navbar
+    Navbar,
+    NavbarLink
 } from '../../presentational';
-import { Link } from 'react-router-dom';
 
 export function withPageTemplate(WrappedComponent, pageProps) {
     const { title } = pageProps;
@@ -15,13 +15,12 @@ export function withPageTemplate(WrappedComponent, pageProps) {
         render() {
             return (
                 <div>
-                    <Header title='This is 3D Dancer'/>
+                    <Header title="Visualization" subtitle='Stuff'/>
+                    <Navbar>
+                        <NavbarLink to='/lineDancing'>Line Dancing</NavbarLink>
+                        <NavbarLink to='/3dDancing'>3D Dancing</NavbarLink>
+                    </Navbar>
                     <PageContainer>
-                        <Navbar>
-                            <Link to='/'>Home</Link>
-                            <Link to='/cubeDancing'>Cube Dancing</Link>
-                            <Link to='/3dDancing'>3D Dancing</Link>
-                        </Navbar>
                         <PageHeading title={title}/>
                         <WrappedComponent {...this.props} />
                     </PageContainer> 

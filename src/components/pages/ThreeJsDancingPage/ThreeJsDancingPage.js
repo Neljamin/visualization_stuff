@@ -32,7 +32,7 @@ class ThreeJsDancingPage extends Component {
 
         const averageFrequency = _.sum(dataArray) / dataArray.length;
         const newScale = averageFrequency / 64;
-        cube.scale.y = newScale;
+        cube.scale.y = newScale + 0.01;
     }
 
     render () {

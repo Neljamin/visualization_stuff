@@ -3,9 +3,7 @@ import './Footer.scss';
 
 const Footer = () => {
     return (
-        <div className='footer'>
-            Aodhagan Murphy
-        </div>
+        <div className='footer' />
     );
 }
 

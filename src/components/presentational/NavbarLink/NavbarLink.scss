@@ -1,0 +1,11 @@
+.navbarLinkContainer {
+    a {
+        color: var(--app-main-color);
+        padding: 8px;
+        text-decoration: none;
+    }
+    .selectedNavbarLink {
+        background-color: white;
+    }
+}
+
