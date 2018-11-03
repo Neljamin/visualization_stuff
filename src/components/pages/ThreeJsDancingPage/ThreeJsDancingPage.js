@@ -16,8 +16,8 @@ class ThreeJsDancingPage extends Component {
     };
 
     componentDidMount() {
-        const geometry = new THREE.BoxGeometry(1, 1, 1);
-        const material = new THREE.MeshBasicMaterial({ color: '#433F81'});
+        const geometry = new THREE.BoxGeometry(2, 2, 2);
+        const material = new THREE.MeshBasicMaterial({ color: '#433F81', wireframe: true });
         const cube = new THREE.Mesh(geometry, material);
         this.setState({ cube, loading: false });
     }
@@ -43,7 +43,7 @@ class ThreeJsDancingPage extends Component {
             <Loader loading={loading}>
                 <AudioContainer
                     chunkSize={chunkSize}
-                    src='./assets/music2.mp3'
+                    src='./assets/music/music2.mp3'
                     newFrameCallback={this.updateCubeSize}
                 />
                 <ThreeJsContainer

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Switch, Route } from 'react-router-dom'
+import { Switch, Route, Redirect } from 'react-router-dom'
 import './App.scss';
 import './scss/colors.scss';
 import './scss/fonts.scss';
@@ -16,7 +16,8 @@ class App extends Component {
         <Switch>
             <Route path='/3dDancing' component={ThreeJsDancingPage}/>
             <Route path='/lineDancing' component={LineDancingPage}/>
-            <Route path='/' component={HomePage}/>
+            <Route exact path='/' component={HomePage}/>
+            <Redirect to="/" />
         </Switch>
       </div>
     );

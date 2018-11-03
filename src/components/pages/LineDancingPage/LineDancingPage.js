@@ -6,8 +6,8 @@ import AudioContainer from '../../container/AudioContainer';
 
 class LineDancingPage extends Component {
     static defaultProps = {
-        chunkSize: 32,
-        boxWidth: 100 / 32
+        chunkSize: 16,
+        boxWidth: 100 / 16
     };
 
     state = {
@@ -30,7 +30,7 @@ class LineDancingPage extends Component {
             <div>
                 <AudioContainer
                     chunkSize={chunkSize}
-                    src='./assets/music.mp3'
+                    src='./assets/music/music.mp3'
                     newFrameCallback={this.draw}
                 />
                 <DancingBoxContainer>
