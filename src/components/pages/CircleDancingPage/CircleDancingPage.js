@@ -26,7 +26,7 @@ class CircleDancingPage extends Component {
         const { chunkSize } = this.props;
         const { averageFrequencies } = this.state;
         return (
-            <CircleDancingPageContainer>
+            <div>
                 <AudioContainer
                     chunkSize={chunkSize}
                     src='./assets/music/music3.mp3'
@@ -45,14 +45,10 @@ class CircleDancingPage extends Component {
                         }
                     </Circle>
                 </DancingCircleContainer>
-            </CircleDancingPageContainer>
+            </div>
         );
     }
 }
-
-const CircleDancingPageContainer = styled.div`
-    min-height: 400px;
-`;
 
 const DancingCircleContainer = styled.div`
     display: flex;

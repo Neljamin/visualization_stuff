@@ -11,7 +11,7 @@ import { ThreeJsDancingPage } from './components/pages/ThreeJsDancingPage';
 import { CircleDancingPage } from './components/pages/CircleDancingPage/';
 
 import NavbarContainer from './components/container/NavbarContainer';
-import { Header, NavbarLink } from './components/presentational';
+import { Header, NavbarLink, Footer } from './components/presentational';
 
 class App extends Component {
   render() {
@@ -31,6 +31,7 @@ class App extends Component {
             <Route exact path='/' component={HomePage}/>
             <Redirect to="/" />
         </Switch>
+        <Footer company='Aodhagán Murphy' />
       </div>
     );
   }

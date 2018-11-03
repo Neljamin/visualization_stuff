@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import {
-    Footer,
     PageContainer,
     PageHeading
 } from '../../presentational';
@@ -16,7 +15,6 @@ export function withPageTemplate(WrappedComponent, pageProps) {
                         <PageHeading title={title}/>
                         <WrappedComponent {...this.props} />
                     </PageContainer> 
-                    <Footer />
                 </div>
             );
         }

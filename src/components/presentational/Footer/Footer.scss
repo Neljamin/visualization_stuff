@@ -1,6 +1,13 @@
 .footer {
-    height: 32px;
-    position: absolute;
-    bottom: 0;
+    margin-top: 128px;
+    color: white;
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 64px 0;
     width: 100%;
+    background-color: var(--app-main-color);
+
+    .footerCompany {
+        padding: 0 8px;
+    }
 }
