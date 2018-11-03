@@ -1,25 +1,23 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Switch, Route } from 'react-router-dom'
+import './App.scss';
+import './scss/colors.scss';
+import './scss/fonts.scss';
+
+// pages
+import { HomePage } from './components/pages/HomePage';
+import { CubeDancingPage } from './components/pages/CubeDancingPage';
+import { ThreeJsDancingPage } from './components/pages/ThreeJsDancingPage';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <Switch>
+            <Route path='/3dDancing' component={ThreeJsDancingPage}/>
+            <Route path='/cubeDancing' component={CubeDancingPage}/>
+            <Route path='/' component={HomePage}/>
+        </Switch>
       </div>
     );
   }
