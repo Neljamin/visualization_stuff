@@ -21,6 +21,13 @@ class HomePage extends Component {
                     src="./assets/images/cube-dancing.png"
                     alt="3D Cube Dancing Thing"
                 />
+                <ProjectThumbnail
+                    to='/circleDancing'
+                    title="Circle Dancing Thing"
+                    size={300}
+                    src="./assets/images/circle-dancing.png"
+                    alt="Circle Dancing Thing"
+                />
             </HomePageProjectThumbnails>
         );
     }

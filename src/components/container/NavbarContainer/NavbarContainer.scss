@@ -26,6 +26,9 @@
         @include mediumScreen {
             display: flex;
             flex-direction: row;
+            &.open {
+                display: flex;
+            }
         }
     }
 
