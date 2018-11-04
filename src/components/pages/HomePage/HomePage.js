@@ -1,33 +1,31 @@
 import React, { Component } from 'react';
-import { withPageTemplate } from '../../hocs/withPageTemplate/withPageTemplate';
-import { ProjectThumbnail } from '../../presentational';
 import styled from 'styled-components';
 
+import { withPageTemplate } from '../../hocs/withPageTemplate/withPageTemplate';
+import { ProjectThumbnailContainer } from '../../container';
+import homePageProjectThumbnails from './homePageThumbnails.json';
+
 class HomePage extends Component {
+    static defaultProps = {
+        projectThumbnailSize: 300
+    };
+
     render () {
+        const { projectThumbnailSize } = this.props;
+
         return (
             <HomePageProjectThumbnails>
-                <ProjectThumbnail
-                    to='/lineDancing'
-                    title="Bar Dancing Thing"
-                    size={300}
-                    src="./assets/images/bar-dancing.png"
-                    alt="Bar Dancing Thing"
-                />
-                <ProjectThumbnail
-                    to='/3dDancing'
-                    title="3D Cube Dancing Thing"
-                    size={300}
-                    src="./assets/images/cube-dancing.png"
-                    alt="3D Cube Dancing Thing"
-                />
-                <ProjectThumbnail
-                    to='/circleDancing'
-                    title="Circle Dancing Thing"
-                    size={300}
-                    src="./assets/images/circle-dancing.png"
-                    alt="Circle Dancing Thing"
-                />
+                {
+                    homePageProjectThumbnails.map(({ link, title, image }) => 
+                        <ProjectThumbnailContainer
+                            to={link}
+                            title={title}
+                            size={projectThumbnailSize}
+                            src={image}
+                            alt={title}
+                        />
+                    )
+                }
             </HomePageProjectThumbnails>
         );
     }

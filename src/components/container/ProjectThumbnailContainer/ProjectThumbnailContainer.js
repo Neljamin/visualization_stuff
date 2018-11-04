@@ -2,7 +2,7 @@ import React from 'react';
 import styled, { css } from 'styled-components';
 import { Link } from 'react-router-dom';
 
-const ProjectThumbnail  = ({
+const ProjectThumbnailContainer  = ({
     to,
     src,
     alt,
@@ -11,7 +11,7 @@ const ProjectThumbnail  = ({
 }) => {
     return (
         <Link to={to}>
-            <StyledProjectThumbnailContainer
+            <StyledProjectThumbnailWrapper
                 size={size}
             >
                 <StyledProjectTitle>
@@ -23,7 +23,7 @@ const ProjectThumbnail  = ({
                     height={size}
                     width={size}
                 />
-            </StyledProjectThumbnailContainer>
+            </StyledProjectThumbnailWrapper>
         </Link>
     );
 };
@@ -39,7 +39,7 @@ const StyledProjectTitle = styled.div`
 `;
 
 
-const StyledProjectThumbnailContainer = styled.div`
+const StyledProjectThumbnailWrapper = styled.div`
     border: solid var(--app-main-color) 1px;
     margin: 8px 0;
     position: relative;
@@ -55,4 +55,4 @@ const StyledProjectThumbnailContainer = styled.div`
 `;
 
 
-export default ProjectThumbnail;
+export default ProjectThumbnailContainer;

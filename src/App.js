@@ -5,12 +5,13 @@ import './scss/colors.scss';
 import './scss/fonts.scss';
 
 // pages
-import { HomePage } from './components/pages/HomePage';
-import { LineDancingPage } from './components/pages/LineDancingPage';
-import { ThreeJsDancingPage } from './components/pages/ThreeJsDancingPage';
-import { CircleDancingPage } from './components/pages/CircleDancingPage/';
-
-import NavbarContainer from './components/container/NavbarContainer';
+import {
+    HomePage,
+    LineDancingPage,
+    ThreeJsDancingPage,
+    CircleDancingPage
+} from './components/pages';
+import { NavbarContainer } from './components/container';
 import { Header, NavbarLink, Footer } from './components/presentational';
 
 class App extends Component {

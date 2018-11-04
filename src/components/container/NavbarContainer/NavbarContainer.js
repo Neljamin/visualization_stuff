@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import classNames from 'classnames';
+
 import './NavbarContainer.scss';
 
 export default class NavbarContainer extends Component {

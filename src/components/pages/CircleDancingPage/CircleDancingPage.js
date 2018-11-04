@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import { withPageTemplate } from '../../hocs/withPageTemplate/withPageTemplate';
 import styled from 'styled-components';
-import AudioContainer from '../../container/AudioContainer';
 import _ from 'lodash';
+
+import { withPageTemplate } from '../../hocs/withPageTemplate/withPageTemplate';
+import { AudioContainer } from '../../container';
 
 class CircleDancingPage extends Component {
     static defaultProps = {
@@ -32,31 +33,31 @@ class CircleDancingPage extends Component {
                     src='./assets/music/music3.mp3'
                     newFrameCallback={this.draw}
                 />
-                <DancingCircleContainer>
-                    <Circle>
+                <DancingCircleWrapper>
+                    <DancingCircle>
                         {
                             averageFrequencies.map((averageFrequency, index) => 
-                                <Line
+                                <DancingCircleLine
                                     key={index}
                                     height={averageFrequency}
                                     rotation={(360 / averageFrequencies.length) * index}
                                 />
                             )
                         }
-                    </Circle>
-                </DancingCircleContainer>
+                    </DancingCircle>
+                </DancingCircleWrapper>
             </div>
         );
     }
 }
 
-const DancingCircleContainer = styled.div`
+const DancingCircleWrapper = styled.div`
     display: flex;
     justify-content: center;
     margin-top: 16px;
 `;
 
-const Line = styled.div.attrs({
+const DancingCircleLine = styled.div.attrs({
         style: ({ height, rotation }) => ({
             height: `${height}px`,
             transform: `rotate(${rotation}deg)`
@@ -73,7 +74,7 @@ const Line = styled.div.attrs({
     transform-origin: top;
 `;
 
-const Circle = styled.div`
+const DancingCircle = styled.div`
     position: relative;
     height: 200px;
     width: 200px;

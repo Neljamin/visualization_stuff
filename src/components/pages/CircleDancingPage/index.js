@@ -1,1 +1,3 @@
-export {default as CircleDancingPage} from './CircleDancingPage';
+import CircleDancingPage from './CircleDancingPage';
+
+export default CircleDancingPage;

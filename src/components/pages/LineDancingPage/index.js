@@ -1,1 +1,3 @@
-export {default as LineDancingPage} from './LineDancingPage';
+import LineDancingPage from './LineDancingPage';
+
+export default LineDancingPage;

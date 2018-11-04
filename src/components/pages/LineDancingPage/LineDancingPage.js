@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import { withPageTemplate } from '../../hocs/withPageTemplate/withPageTemplate';
 import _ from 'lodash';
 import styled from 'styled-components';
-import AudioContainer from '../../container/AudioContainer';
+
+import { AudioContainer } from '../../container';
+import { withPageTemplate } from '../../hocs/withPageTemplate/withPageTemplate';
 
 class LineDancingPage extends Component {
     static defaultProps = {

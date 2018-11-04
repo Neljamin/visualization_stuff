@@ -1,4 +1,5 @@
 import React from 'react';
+
 import './PageHeading.scss';
 
 const PageHeading = ({

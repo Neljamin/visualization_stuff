@@ -1,10 +1,11 @@
-import React, { Component } from 'react';
-import { withPageTemplate } from '../../hocs/withPageTemplate/withPageTemplate';
-import ThreeJsContainer from '../../container/ThreeJsContainer';
-import Loader from '../../container/Loader';
-import * as THREE from 'three';
-import AudioContainer from '../../container/AudioContainer';
 import _ from 'lodash';
+import * as THREE from 'three';
+import React, { Component } from 'react';
+
+import { withPageTemplate } from '../../hocs/withPageTemplate/withPageTemplate';
+import { ThreeJsContainer } from '../../container';
+import { Loader } from '../../presentational';
+import { AudioContainer } from '../../container';
 
 class ThreeJsDancingPage extends Component {
     state = {

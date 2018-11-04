@@ -1,0 +1,17 @@
+[
+    {
+        "link": "/lineDancing",
+        "title": "Bar Dancing Thing",
+        "image": "./assets/images/bar-dancing.png"
+    },
+    {
+        "link": "/3dDancing",
+        "title": "3D Cube Dancing Thing",
+        "image": "./assets/images/cube-dancing.png"
+    },
+    {
+        "link": "/circleDancing",
+        "title": "Circle Dancing Thing",
+        "image": "./assets/images/circle-dancing.png"
+    }
+]

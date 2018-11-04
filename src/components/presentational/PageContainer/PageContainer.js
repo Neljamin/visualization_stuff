@@ -1,4 +1,5 @@
 import React from 'react';
+
 import './PageContainer.scss';
 
 const PageContainer = ({

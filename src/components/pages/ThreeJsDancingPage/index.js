@@ -1,1 +1,3 @@
-export {default as ThreeJsDancingPage} from './ThreeJsDancingPage';
+import ThreeJsDancingPage from './ThreeJsDancingPage';
+
+export default ThreeJsDancingPage;
