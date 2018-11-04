@@ -38,18 +38,19 @@ const StyledProjectTitle = styled.div`
     text-shadow: 2px 2px 0px rgba(0,0,0,0.5);
 `;
 
-
 const StyledProjectThumbnailWrapper = styled.div`
     border: solid var(--app-main-color) 1px;
-    margin: 8px 0;
     position: relative;
     filter: grayscale(50%);
+    justify-content: center;
+    display: flex;
+    width: 100%;
+    height: 300px;
     &:hover {
         filter: none;
     }
     
     ${props => props.size && css`
-        width: ${props.size}px;
         height: ${props.size}px;
     `}
 `;

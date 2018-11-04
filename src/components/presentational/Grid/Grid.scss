@@ -1,0 +1,15 @@
+@import "../../../scss/media_queries.scss";
+
+.grid {
+    display: none;
+    @include mediumScreen {
+        display: grid;
+    }
+}
+
+.gridMobile {
+    display: grid;
+    @include mediumScreen {
+        display: none;
+    }
+}

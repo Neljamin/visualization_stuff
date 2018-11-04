@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import styled from 'styled-components';
 
 import { withPageTemplate } from '../../hocs/withPageTemplate/withPageTemplate';
 import { ProjectThumbnailContainer } from '../../container';
+import { Grid } from '../../presentational';
 import homePageProjectThumbnails from './homePageThumbnails.json';
 
 class HomePage extends Component {
@@ -14,29 +14,23 @@ class HomePage extends Component {
         const { projectThumbnailSize } = this.props;
 
         return (
-            <HomePageProjectThumbnails>
-                {
-                    homePageProjectThumbnails.map(({ link, title, image }) => 
-                        <ProjectThumbnailContainer
-                            key={title}
-                            to={link}
-                            title={title}
-                            size={projectThumbnailSize}
-                            src={image}
-                            alt={title}
-                        />
-                    )
-                }
-            </HomePageProjectThumbnails>
+            <Grid columns={2} mobileColumns={1}>
+            {
+                homePageProjectThumbnails.map(({ link, title, image }) => 
+                    <ProjectThumbnailContainer
+                        key={title}
+                        to={link}
+                        title={title}
+                        size={projectThumbnailSize}
+                        src={image}
+                        alt={title}
+                    />
+                )
+            }
+            </Grid>
         );
     }
 }
-
-const HomePageProjectThumbnails = styled.div`
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-`;
 
 const pageProps = {
     title: "Here are a couple of things that I've messed around with Audio Visualization"
