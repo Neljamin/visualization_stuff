@@ -18,6 +18,7 @@ class HomePage extends Component {
                 {
                     homePageProjectThumbnails.map(({ link, title, image }) => 
                         <ProjectThumbnailContainer
+                            key={title}
                             to={link}
                             title={title}
                             size={projectThumbnailSize}
